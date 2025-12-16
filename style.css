@@ -1,0 +1,291 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background:#0f0f0f;
+  color:white;
+}
+
+/* NAV */
+.navbar {
+  position:fixed;
+  width:100%;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 50px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.navbar ul {
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+.navbar a {
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color:#ffb703;
+  transform:scale(1.2);
+}
+
+/* HERO */
+.hero {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero-title {
+  font-size:4rem;
+  animation: zoom 1.5s ease;
+}
+
+.hero-title span { color:#ffb703; }
+
+@keyframes zoom {
+  from { opacity:0; transform:scale(0.6); }
+  to { opacity:1; transform:scale(1); }
+}
+
+.hero-btn {
+  margin-top:25px;
+  padding:15px 40px;
+  border:none;
+  border-radius:30px;
+  background:#ffb703;
+  cursor:pointer;
+  font-size:1rem;
+}
+
+/* PARALLAX */
+.parallax {
+  height:80vh;
+  background:url("ChatGPT\ Image\ Oct\ 23\,\ 2025\,\ 06_28_53\ PM.png") center/cover fixed;
+}
+
+/* CAROUSEL */
+.carousel {
+  overflow:hidden;
+  padding:80px 0;
+}
+
+.carousel-track {
+  display:flex;
+  animation: slide 14s infinite linear;
+}
+
+.carousel img {
+  width:900px;
+  margin:0 20px;
+  border-radius:20px;
+}
+
+@keyframes slide {
+  0% { transform:translateX(0); }
+  100% { transform:translateX(-100%); }
+}
+
+/* FEATURES */
+.features {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:80px;
+}
+
+.feature {
+  background:#1b1b1b;
+  padding:30px 40px;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+.feature:hover {
+  transform:scale(1.15);
+  background:#ffb703;
+  color:black;
+}
+
+/* MENU */
+.menu {
+  padding:150px 60px;
+}
+
+.page-title {
+  text-align:center;
+  font-size:3rem;
+  margin-bottom:60px;
+}
+
+.menu-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.menu-card {
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  transition:0.4s;
+}
+
+.menu-card:hover {
+  transform:translateY(-10px) scale(1.1);
+  background:#ffb703;
+  color:black;
+}
+
+/* CONTACT */
+.contact {
+  padding:150px 20px;
+}
+
+.contact-form {
+  max-width:400px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding:15px;
+  border:none;
+  border-radius:10px;
+}
+
+.contact-form button {
+  padding:15px;
+  background:#ffb703;
+  border:none;
+  border-radius:10px;
+}
+
+/* FOOTER */
+footer {
+  padding:40px;
+  text-align:center;
+  background:#000;
+}
+
+.socials a {
+  margin:0 12px;
+  font-size:1.5rem;
+  color:white;
+  transition:0.4s;
+}
+
+.socials a:hover {
+  transform:scale(1.4) rotate(10deg);
+  color:#ffb703;
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+
+.reveal.active {
+  opacity:1;
+  transform:translateY(0);
+}
+.photo-watermark {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.15;
+  z-index: 9999;
+  pointer-events: none;
+  user-select: none;
+}
+
+.photo-watermark img {
+  width: 90px;   /* adjust size */
+}
+/* EXPLORE HERO */
+.explore-hero {
+  height: 80vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("burger.jpg") center/cover fixed;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding-top:80px;
+}
+
+.explore-title {
+  font-size:3.5rem;
+  animation: fadeZoom 1.5s ease;
+}
+
+@keyframes fadeZoom {
+  from { opacity:0; transform:scale(0.8); }
+  to { opacity:1; transform:scale(1); }
+}
+
+/* FOOD STORY */
+.food-story {
+  padding:120px 60px;
+  display:flex;
+  flex-direction:column;
+  gap:120px;
+}
+
+.food-item {
+  display:flex;
+  align-items:center;
+  gap:60px;
+}
+
+.food-item.reverse {
+  flex-direction:row-reverse;
+}
+
+.food-item img {
+  width:50%;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+.food-text h2 {
+  font-size:2.2rem;
+  margin-bottom:20px;
+}
+
+.food-text p {
+  font-size:1.1rem;
+  line-height:1.8;
+  color:#ddd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .food-item,
+  .food-item.reverse {
+    flex-direction:column;
+  }
+
+  .food-item img {
+    width:100%;
+  }
+}
